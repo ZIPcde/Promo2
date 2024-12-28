@@ -1,15 +1,18 @@
 [
     {
         "username": "groot",
-        "password": "Spore23"
+        "password": "Spore23",
+        "lastGiftTime": "2024-12-28T14:02:25.358Z"
     },
     {
         "username": "mariarti",
-        "password": "mango12"
+        "password": "mango12",
+        "lastGiftTime": "2024-12-28T13:53:04.885Z"
     },
     {
         "username": "fistina",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T14:02:10.873Z"
     },
     {
         "username": "deletant1",
@@ -26,15 +29,18 @@
     },
     {
         "username": "deletant4",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:08:03.829Z"
     },
     {
         "username": "deletant5",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:08:21.183Z"
     },
     {
         "username": "deletant6",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:08:38.510Z"
     },
     {
         "username": "deletant7",
@@ -54,11 +60,13 @@
     },
     {
         "username": "deletant11",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:40:48.838Z"
     },
     {
         "username": "deletant12",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:41:06.641Z"
     },
     {
         "username": "deletant13",
@@ -66,19 +74,23 @@
     },
     {
         "username": "deletant14",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:41:25.154Z"
     },
     {
         "username": "deletant15",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:41:43.088Z"
     },
     {
         "username": "deletant16",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:42:00.774Z"
     },
     {
         "username": "deletant17",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:42:18.784Z"
     },
     {
         "username": "deletant18",
@@ -86,11 +98,13 @@
     },
     {
         "username": "deletant19",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:42:37.402Z"
     },
     {
         "username": "deletant20",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:42:55.051Z"
     },
     {
         "username": "deletant21",
@@ -98,7 +112,8 @@
     },
     {
         "username": "deletant22",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:43:13.876Z"
     },
     {
         "username": "deletant23",
@@ -114,7 +129,8 @@
     },
     {
         "username": "deletant26",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:43:35.317Z"
     },
     {
         "username": "deletant27",
@@ -162,7 +178,8 @@
     },
     {
         "username": "deletant38",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:45:12.081Z"
     },
     {
         "username": "deletant39",
@@ -170,31 +187,38 @@
     },
     {
         "username": "deletant40",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:45:30.474Z"
     },
     {
         "username": "deletant41",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:45:47.989Z"
     },
     {
         "username": "deletant42",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:46:05.382Z"
     },
     {
         "username": "deletant43",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:46:22.788Z"
     },
     {
         "username": "deletant44",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:53:17.494Z"
     },
     {
         "username": "deletant45",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:46:40.814Z"
     },
     {
         "username": "deletant46",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:53:35.007Z"
     },
     {
         "username": "deletant47",
@@ -202,19 +226,23 @@
     },
     {
         "username": "deletant48",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:46:59.571Z"
     },
     {
         "username": "deletant49",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:53:53.198Z"
     },
     {
         "username": "deletant50",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:47:17.830Z"
     },
     {
         "username": "deletant51",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:54:11.035Z"
     },
     {
         "username": "deletant52",
@@ -222,19 +250,23 @@
     },
     {
         "username": "deletant53",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:54:28.945Z"
     },
     {
         "username": "deletant54",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:54:46.589Z"
     },
     {
         "username": "deletant55",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:47:37.823Z"
     },
     {
         "username": "deletant56",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:55:04.003Z"
     },
     {
         "username": "deletant57",
@@ -242,7 +274,8 @@
     },
     {
         "username": "deletant58",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:47:56.539Z"
     },
     {
         "username": "deletant59",

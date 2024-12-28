@@ -41,35 +41,60 @@ function isEligibleForGift(lastGiftTime) {
             }
 
             try {
-                // Открытие страницы входа
                 console.log('Переход на страницу входа...');
                 await Promise.race([
                     page.goto('https://fw-rebirth.com/register_or_login#login', { waitUntil: 'load' }),
                     delay(20000), // Максимум 20 секунд
                 ]);
+                await delay(200);
 
                 console.log('Попытка ввода данных в форму...');
                 await page.type('input[name="username"]', account.username);
+                await delay(200);
                 await page.type('input[name="password"]', account.password);
+                await delay(200);
 
-                // Отправка формы
                 console.log('Отправка данных для входа...');
                 await page.keyboard.press('Enter');
+                await delay(200);
 
-                console.log('Ожидание загрузки страницы или переход...');
-                await Promise.race([
-                    page.waitForNavigation({ waitUntil: 'load', timeout: 7000 }), // Ждем максимум 7 секунд
-                    delay(7000)
-                ]);
-
-                console.log(`Переход на страницу: https://fw-rebirth.com/xmas.php`);
+                console.log('Переход на страницу: https://fw-rebirth.com/xmas.php');
                 await page.goto('https://fw-rebirth.com/xmas.php', { waitUntil: 'load' });
+                await delay(200);
 
                 // Проверка наличия таймера
                 try {
-                    await page.waitForSelector('.timer', { timeout: 10000 });
-                    console.log('Таймер найден, разлогиниваемся...');
+                    await page.waitForSelector('.time-left', { timeout: 10000 });
+                    console.log('Таймер найден.');
+
+                    // Извлечение значений таймера
+                    const timer = await page.evaluate(() => {
+                        const timeElements = document.querySelectorAll('.time li');
+                        if (timeElements.length === 3) {
+                            const [hours, minutes, seconds] = Array.from(timeElements).map(el => parseInt(el.textContent.trim(), 10));
+                            return { hours, minutes, seconds };
+                        }
+                        return null;
+                    });
+
+                    if (timer) {
+                        console.log(`Оставшееся время: ${timer.hours}ч ${timer.minutes}м ${timer.seconds}с`);
+
+                        // Вычисление времени последнего подарка
+                        const now = new Date();
+                        now.setHours(now.getHours() - timer.hours);
+                        now.setMinutes(now.getMinutes() - timer.minutes);
+                        now.setSeconds(now.getSeconds() - timer.seconds);
+
+                        account.lastGiftTime = now.toISOString();
+                        console.log(`Обновленное время последнего подарка: ${account.lastGiftTime}`);
+                        saveAccounts();
+                    }
+
+                    console.log('Разлогиниваемся...');
                     await page.goto('https://fw-rebirth.com/lk_scripts/logout', { waitUntil: 'load' });
+                    await delay(200);
+                    continue; // Пропускаем текущий аккаунт
                 } catch {
                     console.log('Таймер не найден, выбираем подарок...');
                     const prizeBox = await page.$('.prize.choose');
@@ -77,14 +102,24 @@ function isEligibleForGift(lastGiftTime) {
                         await prizeBox.click();
                         await delay(2000); // Задержка в 2 секунды после выбора
 
-                        // Проверка появления таймера
                         try {
-                            await page.waitForSelector('.timer', { timeout: 10000 });
-                            console.log('Таймер появился. Обновляем время последнего подарка.');
+                            const prizeElement = await page.waitForSelector('.prize.win', { timeout: 10000 });
+                            const prizeTitle = await prizeElement.evaluate(el => el.getAttribute('title'));
+
+                            if (prizeTitle) {
+                                console.log(`Найден подарок: ${prizeTitle}`);
+                                if (!account.gifts) {
+                                    account.gifts = [];
+                                }
+                                account.gifts.push(prizeTitle);
+                                console.log('Подарок добавлен в список аккаунта.');
+                            }
+
+                            console.log('Обновляем время последнего подарка.');
                             account.lastGiftTime = new Date().toISOString();
                             saveAccounts();
                         } catch {
-                            console.log('Таймер не появился.');
+                            console.log('Таймер или подарок не обнаружены.');
                         }
                     }
                 }
@@ -92,12 +127,12 @@ function isEligibleForGift(lastGiftTime) {
                 console.error(`Ошибка при обработке аккаунта ${account.username}: ${error.message}`);
             }
 
-            // Разлогиниваемся после обработки аккаунта
             console.log('Переход на страницу выхода...');
             await Promise.race([
                 page.goto('https://fw-rebirth.com/lk_scripts/logout', { waitUntil: 'load' }),
-                delay(20000), // Максимум 20 секунд
+                delay(20000),
             ]);
+            await delay(200);
 
             console.log('Переход к следующему аккаунту...');
         }
