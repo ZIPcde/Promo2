@@ -16,7 +16,8 @@
     },
     {
         "username": "deletant1",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T16:24:54.635Z"
     },
     {
         "username": "deletant2",
@@ -25,7 +26,8 @@
     },
     {
         "username": "deletant3",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T15:09:38.257Z"
     },
     {
         "username": "deletant4",
@@ -44,19 +46,26 @@
     },
     {
         "username": "deletant7",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T15:03:10.808Z"
     },
     {
         "username": "deletant8",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T13:19:04.363Z"
     },
     {
         "username": "deletant9",
-        "password": "spore23"
+        "password": "spore23",
+        "lastGiftTime": "2024-12-28T13:18:39.906Z"
     },
     {
         "username": "deletant10",
-        "password": "spore23"
+        "password": "spore23",
+        "gifts": [
+            "Роскошный набор высших рун 1 ур x1"
+        ],
+        "lastGiftTime": "2024-12-28T18:36:23.608Z"
     },
     {
         "username": "deletant11",
@@ -70,7 +79,11 @@
     },
     {
         "username": "deletant13",
-        "password": "spore23"
+        "password": "spore23",
+        "gifts": [
+            "Плавитель 3 ур. x1"
+        ],
+        "lastGiftTime": "2024-12-28T18:36:39.262Z"
     },
     {
         "username": "deletant14",
@@ -94,7 +107,11 @@
     },
     {
         "username": "deletant18",
-        "password": "spore23"
+        "password": "spore23",
+        "gifts": [
+            "Военное жалованье 2 бр x5"
+        ],
+        "lastGiftTime": "2024-12-28T18:36:54.919Z"
     },
     {
         "username": "deletant19",
@@ -108,7 +125,11 @@
     },
     {
         "username": "deletant21",
-        "password": "spore23"
+        "password": "spore23",
+        "gifts": [
+            "Плавитель 2 ур. x1"
+        ],
+        "lastGiftTime": "2024-12-28T18:37:10.495Z"
     },
     {
         "username": "deletant22",
@@ -117,7 +138,11 @@
     },
     {
         "username": "deletant23",
-        "password": "spore23"
+        "password": "spore23",
+        "gifts": [
+            "Свиток совершенствования x5"
+        ],
+        "lastGiftTime": "2024-12-28T18:37:26.501Z"
     },
     {
         "username": "deletant24",

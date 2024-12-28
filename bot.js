@@ -28,7 +28,7 @@ function isEligibleForGift(lastGiftTime) {
         args: ['--start-maximized']
     });
     const page = await browser.newPage();
-    await page.setViewport({ width: 1920, height: 1080 });
+    await page.setViewport({ width: 1620, height: 1080 });
 
     while (true) { // Бесконечный цикл
         for (let account of accounts) {
@@ -56,7 +56,7 @@ function isEligibleForGift(lastGiftTime) {
 
                 console.log('Отправка данных для входа...');
                 await page.keyboard.press('Enter');
-                await delay(200);
+                await delay(2000);
 
                 console.log('Переход на страницу: https://fw-rebirth.com/xmas.php');
                 await page.goto('https://fw-rebirth.com/xmas.php', { waitUntil: 'load' });
@@ -86,8 +86,8 @@ function isEligibleForGift(lastGiftTime) {
                         now.setMinutes(now.getMinutes() - timer.minutes);
                         now.setSeconds(now.getSeconds() - timer.seconds);
 
+                        console.log(`Вычисленное время последнего подарка: ${now.toISOString()}`);
                         account.lastGiftTime = now.toISOString();
-                        console.log(`Обновленное время последнего подарка: ${account.lastGiftTime}`);
                         saveAccounts();
                     }
 
